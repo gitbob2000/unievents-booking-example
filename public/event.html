@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <!-- <html> -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UniEvents: Book a place</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="event-title">Loading…</h1>
+      <p id="event-date"></p>
+
+      <button id="book-button" type="button" disabled>Book a place</button>
+      <p id="message" role="alert"></p>
+
+      <section id="confirmation" hidden aria-live="polite">
+        <h2>Booking confirmed</h2>
+        <p>Event: <span id="confirmation-title"></span></p>
+        <p>Date: <span id="confirmation-date"></span></p>
+        <p>Reference: <span id="confirmation-ref"></span></p>
+      </section>
+    </main>
+    <script src="/event.js"></script>
+  </body>
+</html>

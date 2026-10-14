@@ -1,0 +1,16 @@
+name: Weekly dependency audit
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # Mondays at 07:00 UTC
+  workflow_dispatch:       # lets you run it by hand from the Actions tab
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm audit --audit-level=high
